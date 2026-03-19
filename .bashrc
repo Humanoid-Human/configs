@@ -8,7 +8,7 @@ export QT_IM_MODULE=ibus
 
 # aliases
 alias update='sudo apt-get update && sudo apt-get upgrade'
-alias fbsd-wg='~/code/misc/freebsd-wg.sh'
+alias fbsd-wg='~/code/misc/fbsd-wg/freebsd-wg.sh'
 alias livesplit='~/apps/LiveSplitOne/LiveSplitOne'
 
 # If not running interactively, don't do anything
