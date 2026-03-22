@@ -1,3 +1,8 @@
+package.path = '~/configs/nvim/?.lua;'..package.path
+
+local w = 24
+pcall(function () w = require('local').ntree_width end)
+
 return {
 	"nvim-neo-tree/neo-tree.nvim",
 	name = "neotree",
@@ -11,6 +16,6 @@ return {
   	---@module 'neo-tree'
   	---@type neotree.Config
   	opts = {
-    	window = { width = 24 }
+    	window = { width = w }
   	}
 }
