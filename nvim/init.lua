@@ -13,7 +13,7 @@ vim.keymap.set('n', '<C-BS>', '"_bdw')
 vim.keymap.set('i', '<C-BS>', '<C-W>')
 
 vim.keymap.set('n', '<C-Del>', '"_dw')
-vim.keymap.set('i', '<C-Del>', '<Esc>ce')
+vim.keymap.set('i', '<C-Del>', '<Esc>lce')
 
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 
