@@ -7,7 +7,8 @@ vim.opt.number = true
 vim.opt.rnu    = true
 
 vim.opt.clipboard = 'unnamedplus'
-vim.opt.syntax    = 'on'
+
+vim.g.terminal_emulator = 'kitty'
 
 vim.keymap.set('n', '<C-BS>', '"_bdw')
 vim.keymap.set('i', '<C-BS>', '<C-W>')
@@ -17,7 +18,11 @@ vim.keymap.set('i', '<C-Del>', '<Esc>lce')
 
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 
-vim.api.nvim_set_var('terminal_emulator', 'kitty')
+vim.keymap.set('n', '<C-H>', vim.cmd.noh)
+
+vim.keymap.set('v', '<C-]>', '>gv')
+vim.keymap.set('v', '<C-[>', '<gv')
+vim.keymap.set('v', '<Esc>', '<C-Esc>')
 
 vim.cmd.colorscheme('catppuccin')
-vim.api.nvim_create_user_command('Tr', 'Neotree', {})
+vim.api.nvim_create_user_command('Tree', 'Neotree', {})
