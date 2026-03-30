@@ -26,3 +26,11 @@ vim.keymap.set('v', '<Esc>', '<C-Esc>')
 
 vim.cmd.colorscheme('catppuccin')
 vim.api.nvim_create_user_command('Tree', 'Neotree', {})
+
+vim.lsp.config('rust-analyzer', {
+    settings = {
+		['rust-analyzer'] = { diagnostics = { enable = false; } }
+	}
+})
+vim.lsp.enable('rust-analyzer')
+vim.lsp.inlay_hint.enable(true)
