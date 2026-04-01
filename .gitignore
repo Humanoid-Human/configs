@@ -1,2 +1,3 @@
 kitty/local.conf
 nvim/local.lua
+nvim/lazy-lock.json
