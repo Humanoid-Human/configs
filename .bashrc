@@ -42,8 +42,6 @@ fi
 
 PS1='\[\e[35m\]\u\[\e[0m\]@\[\e[95m\]\h\[\e[0m\]:\[\e[36;1m\]\w\[\e[0m\]\\$ '
 
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 

@@ -1,3 +1,5 @@
+vim.g.mapleader = ' '
+
 require('config.lazy')
 
 vim.opt.tabstop    = 4
@@ -6,9 +8,8 @@ vim.opt.shiftwidth = 4
 vim.opt.number = true
 vim.opt.rnu    = true
 
-vim.opt.clipboard = 'unnamedplus'
-
 vim.g.terminal_emulator = 'kitty'
+vim.opt.clipboard = 'unnamedplus'
 
 vim.keymap.set('n', '<C-BS>', '"_bdw')
 vim.keymap.set('i', '<C-BS>', '<C-W>')
@@ -25,12 +26,3 @@ vim.keymap.set('v', '<C-[>', '<gv')
 vim.keymap.set('v', '<Esc>', '<C-Esc>')
 
 vim.cmd.colorscheme('catppuccin')
-vim.api.nvim_create_user_command('Tree', 'Neotree', {})
-
-vim.lsp.config('rust-analyzer', {
-    settings = {
-		['rust-analyzer'] = { diagnostics = { enable = false; } }
-	}
-})
-vim.lsp.enable('rust-analyzer')
-vim.lsp.inlay_hint.enable(true)

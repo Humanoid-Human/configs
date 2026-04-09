@@ -17,5 +17,8 @@ return {
   	---@type neotree.Config
   	opts = {
     	window = { width = w }
-  	}
+  	},
+	config = function ()
+		vim.api.nvim_create_user_command('Tree', 'Neotree', {})
+	end
 }
