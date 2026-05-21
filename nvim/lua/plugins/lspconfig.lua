@@ -13,7 +13,5 @@ return {
     	})
 		vim.lsp.inlay_hint.enable(true)
 		vim.lsp.enable("rust_analyzer")
-		
-		vim.keymap.set("n", "<Leader>d", "<C-w>d")
 	end
 }
