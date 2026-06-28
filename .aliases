@@ -1,23 +1,22 @@
 alias update='sudo apt-get update && sudo apt-get upgrade'
 
-alias fbsd-wg='~/code/misc/fbsd-wg/freebsd-wg.sh'
-
 alias livesplit='~/apps/LiveSplitOne/LiveSplitOne'
 
 alias rg='rg --hyperlink-format=kitty'
-
-alias ls='ls --color=auto --hyperlink=auto'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# some more ls aliases
-alias ll='ls -alFh'
+alias ls='ls --color=auto --hyperlink=auto'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+
+alias ll='ls -gFh'
 alias la='ls -A'
 alias l='ls -CF'
+
+alias nv=nvim
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
