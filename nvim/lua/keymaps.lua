@@ -53,5 +53,10 @@ vim.keymap.set('v', '<C-]>', '>gv')
 vim.keymap.set('v', '<C-[>', '<gv')
 vim.keymap.set('v', '<Esc>', '<C-Esc>')
 
+-- surround
+vim.keymap.set('v', '(', '"ac(<C-r>a)')
+vim.keymap.set('v', '[', '"ac[<C-r>a]')
+vim.keymap.set('v', '{', '"ac{<C-r>a}')
+
 -- save
 vim.keymap.set({'n', 'i'}, '<C-S>', vim.cmd.w)

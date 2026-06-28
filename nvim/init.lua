@@ -23,7 +23,7 @@ vim.lsp.enable('gdscript')
 vim.lsp.enable('clangd')
 
 vim.api.nvim_create_autocmd(
-	{ 'BufNewFile', 'BufReadPost' },
+	{ 'BufWinEnter' },
 	{ command = 'Neotree action=show' }
 )
 
