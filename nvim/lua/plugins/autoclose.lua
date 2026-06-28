@@ -6,7 +6,8 @@ return {
 			keys = {
 				["("] = { close = false },
 				[")"] = { escape = false },
-				[">"] = { escape = false }
+				[">"] = { escape = false },
+				["'"] = { close = false }
 			}
 		})
 	end

@@ -1,20 +1,25 @@
+--
 -- keymaps file
+--
+
 -- lsp stuff
-vim.keymap.set('n', '<leader>ld', vim.diagnostic.open_float)
-vim.keymap.set('n', '<leader>ln', '[d')
-vim.keymap.set('n', '<leader>lp', ']d')
-vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename)
-vim.keymap.set('i', '<C-Space>', vim.lsp.completion.get)
+vim.keymap.set('n', '<leader>ld', vim.diagnostic.open_float,
+	{ desc = "Open diagnostic" })
+vim.keymap.set('n', '<leader>ln', '[d',
+	{ desc = "Next diagnostic"})
+vim.keymap.set('n', '<leader>lp', ']d',
+	{ desc = "Next diagnostic"})
+vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename,
+	{ desc = "Rename"})
 
 -- completion settings
+vim.keymap.set('i', '<C-Space>', vim.lsp.completion.get)
 vim.keymap.set('i', '\t',
 	function () return vim.fn.pumvisible() == 1 and '<C-y>' or '\t' end,
 	{ expr = true })
-
 vim.keymap.set('i', 'j',
 	function () return vim.fn.pumvisible() == 1 and '<C-n>' or 'j' end,
 	{ expr = true })
-
 vim.keymap.set('i', 'k',
 	function () return vim.fn.pumvisible() == 1 and '<C-p>' or 'k' end,
 	{ expr = true })
@@ -23,10 +28,14 @@ vim.keymap.set('i', 'k',
 vim.keymap.set('n', '<leader>t', '<cmd>Neotree<cr>')
 
 -- telescope
-vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
-vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
-vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
-vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
+vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>',
+	{ desc = "find files" })
+vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>',
+	{ desc = "live grep" })
+vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<cr>',
+	{ desc = "find buffers" })
+vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<cr>',
+	{ desc = "help tags" })
 
 -- movement works with wrapped lines
 vim.keymap.set('n', 'j', 'gj')
