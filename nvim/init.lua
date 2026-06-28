@@ -22,4 +22,9 @@ vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('gdscript')
 vim.lsp.enable('clangd')
 
+vim.api.nvim_create_autocmd(
+	{ 'BufNewFile', 'BufReadPost' },
+	{ command = 'Neotree action=show' }
+)
+
 require('keymaps')
