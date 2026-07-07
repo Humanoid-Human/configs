@@ -1,5 +1,5 @@
 --
--- keymaps file
+-- keymap file
 --
 
 -- lsp stuff
@@ -66,6 +66,8 @@ vim.keymap.set('v', '<Esc>', '<C-Esc>')
 vim.keymap.set('v', '(', '"ac(<C-r>a)')
 vim.keymap.set('v', '[', '"ac[<C-r>a]')
 vim.keymap.set('v', '{', '"ac{<C-r>a}')
+vim.keymap.set('v', '`', '"ac`<C-r>a`')
+vim.keymap.set('v', '*', '"ac*<C-r>a*')
 
 -- save
 vim.keymap.set({'n', 'i'}, '<C-S>', vim.cmd.w)
