@@ -1,3 +1,5 @@
+# vim: set filetype=bash :
+
 alias update='sudo apt-get update && sudo apt-get upgrade'
 
 alias livesplit='~/apps/LiveSplitOne/LiveSplitOne'
@@ -21,3 +23,28 @@ alias nv=nvim
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# timer that takes minutes
+function timer() {
+	t=0
+	stop_t=$(($1 * 60))
+
+	while [[ ${t} -lt ${stop_t} ]]; do
+		# minutes:seconds / minutes:00
+		printf "%d:%02d/%d:00" $((t / 60)) $((t % 60)) "$1"
+		sleep 1
+		t=$((t + 1))
+		printf "\033[2K\r"
+	done
+	echo "done at" "$(date +"%H:%M")"
+} 
+
+# random number in [1, N]
+function rand() {
+	max=$1
+	num=${RANDOM}
+	while [[ ${num} -ge $((32768 / max * max)) ]]; do
+		num=${RANDOM}
+	done
+	echo $((num % max + 1))
+}
