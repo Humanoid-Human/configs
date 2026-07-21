@@ -13,13 +13,22 @@ return {
   	lazy = false,
   	---@module 'neo-tree'
   	---@type neotree.Config
-  	opts = { window = {
-		width = w,
-		mappings = {
-			["<tab>"] = function(state)
-				state.commands["open"](state)
-				vim.cmd("Neotree reveal")
-			end,
+  	opts = {
+		window = {
+			width = w,
+			mappings = {
+				["<tab>"] = function(state)
+					state.commands["open"](state)
+					vim.cmd("Neotree reveal")
+				end,
+			}
+		},
+		event_handlers = {
+			{ event = 'neo_tree_buffer_enter',
+				handler = function() vim.cmd.stopinsert() end },
+			{ event = 'file_opened',
+				handler = function() vim.cmd('Neotree show') end }
 		}
-	}}
+
+	}
 }

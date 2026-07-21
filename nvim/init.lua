@@ -20,11 +20,15 @@ vim.opt.completeopt = 'menuone,popup'
 
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('gdscript')
-vim.lsp.enable('clangd')
+if not vim.lsp.is_enabled('clangd') then
+    vim.lsp.enable('clangd', {
+		init_options = { fallbackFlags = { 'std=c++23' } }
+	})
+end
 
 vim.api.nvim_create_autocmd(
-	{ 'BufWinEnter' },
-	{ command = 'Neotree action=show' }
+	{ 'VimEnter' },
+	{ command = 'Neotree show' }
 )
 
 vim.api.nvim_create_autocmd(
