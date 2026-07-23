@@ -18,7 +18,7 @@ fi
 export PATH
 
 # prompt
-PS1='\[\e[35m\]\u\[\e[0m\]@\[\e[95m\]\h\[\e[0m\]:\[\e[36;1m\]\w\[\e[0m\]\\$ '
+PS1='\[\e[38;2;203;166;247m\]\u\[\e[0m\]:\[\e[38;2;245;194;231m\]\w\[\e[0m\]\$ '
 
 # default text editor
 EDITOR=nvim
