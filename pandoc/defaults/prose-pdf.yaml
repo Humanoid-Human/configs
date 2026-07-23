@@ -1,0 +1,3 @@
+output-file: output.pdf
+pdf-engine: weasyprint
+css: ${.}/prose-pdf.css

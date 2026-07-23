@@ -1,0 +1,11 @@
+h1, h2, h3 {
+	text-align: center;
+	font-size: 161%;
+}
+
+body {
+	font-family: "Vollkorn", serif;
+	text-align: justify;
+	text-indent: 2em;
+	margin: 1cm;
+}
