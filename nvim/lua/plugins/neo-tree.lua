@@ -4,7 +4,6 @@ pcall(function () w = require('local').ntree_width end)
 return {
 	"nvim-neo-tree/neo-tree.nvim",
 	name = "neotree",
-  	branch = "v3.x",
   	dependencies = {
     	"nvim-lua/plenary.nvim",
     	"MunifTanjim/nui.nvim",
