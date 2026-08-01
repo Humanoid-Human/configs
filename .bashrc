@@ -76,3 +76,5 @@ if ! shopt -oq posix; then
 fi
 
 . "$HOME/.cargo/env"
+
+[ -f "/home/humanoid_human/.ghcup/env" ] && . "/home/humanoid_human/.ghcup/env" # ghcup-env
