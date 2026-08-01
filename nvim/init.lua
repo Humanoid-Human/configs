@@ -20,11 +20,8 @@ vim.opt.completeopt = 'menuone,popup'
 
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('gdscript')
-if not vim.lsp.is_enabled('clangd') then
-    vim.lsp.enable('clangd', {
-		init_options = { fallbackFlags = { 'std=c++23' } }
-	})
-end
+vim.lsp.enable('clangd')
+vim.lsp.enable('haskell')
 
 vim.api.nvim_create_autocmd(
 	{ 'VimEnter' },
