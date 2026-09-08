@@ -21,7 +21,9 @@ vim.opt.completeopt = 'menuone,popup'
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('gdscript')
 vim.lsp.enable('clangd')
-vim.lsp.enable('haskell')
+vim.lsp.enable('hls')
+vim.lsp.enable('zls')
+vim.lsp.enable('bash-language-server')
 
 vim.api.nvim_create_autocmd(
 	{ 'VimEnter' },
