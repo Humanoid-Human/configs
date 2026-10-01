@@ -3,11 +3,10 @@ return {
 	name = 'autoclose',
 	config = function ()
 		require('autoclose').setup({
-			keys = {
-				["("] = { close = false },
-				[")"] = { escape = false },
-				[">"] = { escape = false },
-				["'"] = { close = false }
+			keys = { [">"] = { escape = false } },
+			options = {
+				disabled_filetypes = { 'text', 'markdown' },
+				disable_when_touch = true
 			}
 		})
 	end

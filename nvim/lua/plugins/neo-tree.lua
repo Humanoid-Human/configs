@@ -13,6 +13,7 @@ return {
   	---@module 'neo-tree'
   	---@type neotree.Config
   	opts = {
+		close_if_last_window = true,
 		window = {
 			width = w,
 			mappings = {
