@@ -8,9 +8,10 @@ return {
 		require('lualine').setup({
 			options = { globalstatus = true },
 			sections = {
-				lualine_b = { 'branch', 'diff' },
-				lualine_x = { 'filetype' },
-				lualine_y = { 'prose_word_count', 'diagnostics', 'progress' }
+				lualine_b = { 'filename', 'diff' },
+				lualine_c = { 'branch' },
+				lualine_x = { 'prose_word_count', 'diagnostics' },
+				lualine_y = { 'filetype' }
 			}
 		})
 	end

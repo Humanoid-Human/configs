@@ -14,6 +14,7 @@ return {
   	---@type neotree.Config
   	opts = {
 		close_if_last_window = true,
+		
 		window = {
 			width = w,
 			mappings = {
@@ -23,12 +24,21 @@ return {
 				end,
 			}
 		},
-		event_handlers = {
-			{ event = 'neo_tree_buffer_enter',
-				handler = function() vim.cmd.stopinsert() end },
-			{ event = 'file_opened',
-				handler = function() vim.cmd('Neotree show') end }
-		}
 
+		event_handlers = {
+			{
+				event = 'neo_tree_buffer_enter',
+				handler = function() vim.cmd.stopinsert() end
+			},
+			{
+				event = 'file_opened',
+				handler = function() vim.cmd('Neotree show') end
+			}
+		},
+
+		filesystem = {
+			filtered_items = { visible = true },
+			never_show = { '.git' },
+		}
 	}
 }
